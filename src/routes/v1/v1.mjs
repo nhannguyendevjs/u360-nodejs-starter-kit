@@ -9,7 +9,7 @@ const swaggerJsdocOptions = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'u360 RESTfull APIs',
+      title: 'u360 Service API',
       version: '1.0.0',
     },
   },
