@@ -13,13 +13,6 @@ export const BullMQConfigs = {
   BULLMQ_ADMIN_PATH: process.env.BULLMQ_ADMIN_PATH,
 };
 
-export const ImageKitConfigs = {
-  ENABLE_IMAGEKIT: process.env.ENABLE_IMAGEKIT,
-  IMAGEKIT_PUBLIC_KEY: process.env.IMAGEKIT_PUBLIC_KEY,
-  IMAGEKIT_PRIVATE_KEY: process.env.IMAGEKIT_PRIVATE_KEY,
-  IMAGEKIT_URL_ENDPOINT: process.env.IMAGEKIT_URL_ENDPOINT,
-};
-
 export const JWTConfigs = {
   JWT_ALGORITHM: process.env.JWT_ALGORITHM,
   JWT_ACCESS_TOKEN_SECRET: process.env.JWT_ACCESS_TOKEN_SECRET,
@@ -33,14 +26,6 @@ export const LoggerConfigs = {
   ENABLE_LOGGER_FILE: process.env.ENABLE_LOGGER_FILE,
 };
 
-export const MailConfigs = {
-  ENABLE_MAIL: process.env.ENABLE_MAIL,
-  MAIL_URL: process.env.MAIL_URL,
-  ENABLE_GMAIL: process.env.ENABLE_GMAIL,
-  GMAIL_ACCOUNT: process.env.GMAIL_ACCOUNT,
-  GMAIL_PASSWD: process.env.GMAIL_PASSWD,
-};
-
 export const MongoDBConfigs = {
   ENABLE_MONGO: process.env.ENABLE_MONGO,
   MONGO_URI: process.env.MONGO_URI,
@@ -50,30 +35,9 @@ export const MongoDBConfigs = {
   MONGO_DBNAME: process.env.APP_DOMAIN,
 };
 
-export const OpenWeatherConfigs = {
-  OPEN_WEATHER_API_KEY: process.env.OPEN_WEATHER_API_KEY,
-  OPEN_WEATHER_CURRENT_WEATHER_API_URL: process.env.OPEN_WEATHER_CURRENT_WEATHER_API_URL,
-  OPEN_WEATHER_WEATHER_5_DAYS_API_URL: process.env.OPEN_WEATHER_WEATHER_5_DAYS_API_URL,
-  OPEN_WEATHER_DIRECT_GEOCODING_API_URL: process.env.OPEN_WEATHER_DIRECT_GEOCODING_API_URL,
-  OPEN_WEATHER_ZIP_POST_GEOCODING_API_URL: process.env.OPEN_WEATHER_ZIP_POST_GEOCODING_API_URL,
-};
-
-export const PusherConfigs = {
-  ENABLE_PUSHER: process.env.ENABLE_PUSHER,
-  PUSHER_APP_ID: process.env.PUSHER_APP_ID,
-  PUSHER_KEY: process.env.PUSHER_KEY,
-  PUSHER_SECRET: process.env.PUSHER_SECRET,
-  PUSHER_CLUSTER: process.env.PUSHER_CLUSTER,
-};
-
 export const RequestConfigs = {
   ENABLE_REQUEST: process.env.ENABLE_REQUEST,
   REQUEST_TIMEOUT: process.env.REQUEST_TIMEOUT,
-};
-
-export const WebSocketConfigs = {
-  ENABLE_WEBSOCKET: process.env.ENABLE_WEBSOCKET,
-  WEBSOCKET_URL: process.env.WEBSOCKET_URL,
 };
 
 export const PrismaConfigs = {
