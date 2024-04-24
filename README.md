@@ -67,7 +67,7 @@ config = { "_id" : "rs-u360", "members" : [ { "_id" : 0, "host" : "u360-mongo:27
 rs.initiate(config)
 ```
 
-##### Secondary
+#### Secondary
 
 ```bash
 docker run -d --network u360-network -p 127.0.20.1:27017:27017 --name u360-mongo-secondary mongo:latest mongod --replSet rs-u360
@@ -75,7 +75,7 @@ docker run -d --network u360-network -p 127.0.20.1:27017:27017 --name u360-mongo
 docker exec -it u360-mongo-secondary mongosh
 ```
 
-##### Add Host
+#### Add Host
 
 ```txt
 # Docker u360 MongoDB Replica Set
@@ -90,7 +90,7 @@ docker exec -it u360-mongo-secondary mongosh
 mongodb://u360-mongo:27017,u360-mongo-secondary:27018/test?replicaSet=repl-set
 ```
 
-#### Redis
+### Redis
 
 ```bash
 docker run -d --network u360-network -p 6379:6379 --name u360-redis redis:latest
