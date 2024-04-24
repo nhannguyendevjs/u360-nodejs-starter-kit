@@ -10,7 +10,7 @@ const Logger = createLogger({
     new transports.File({
       silent: !LoggerConfigs.ENABLE_LOGGER_FILE,
       level: 'error',
-      filename: 'logs/u360-service.log',
+      filename: 'logs/u360.log',
     }),
   ],
 });

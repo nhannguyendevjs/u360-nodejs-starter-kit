@@ -99,13 +99,13 @@ docker run -d --network u360-network -p 6379:6379 --name u360-redis redis:latest
 ### Docker Build
 
 ```bash
-docker build . -t u360-service:latest
+docker build . -t u360:latest
 ```
 
 ### Docker Run
 
 ```bash
-docker run -d -p 80:80 -p 443:443 --network u360-network -v d:/Debug/u360-service/app:/app/ --name u360-service u360-service:latest
+docker run -d -p 80:80 -p 443:443 --network u360-network -v d:/Debug/u360/app:/app/ --name u360 u360:latest
 ```
 
 ### Docker Compose

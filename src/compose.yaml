@@ -7,10 +7,10 @@ services:
       networks:
           - u360-network
       restart: always
-  u360-service:
-      image: u360-service:latest
+  u360:
+      image: u360:latest
       volumes:
-          - d:/Debug/u360-service/app:/app/
+          - d:/Debug/u360/app:/app/
       ports:
           - "8080:8080"
           - "8443:8443"
