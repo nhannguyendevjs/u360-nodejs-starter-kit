@@ -50,50 +50,22 @@ docker run --name u360-ubuntu --network u360-network -p 80:8080 -p 443:8443 -p 2
 
 ### MongoDB
 
-#### Deploy Replica Set With Keyfile Authentication
-
-[Deploy Replica Set With Keyfile Authentication](https://www.mongodb.com/docs/manual/tutorial/deploy-replica-set-with-keyfile-access-control/)
-[Update Replica Set to Keyfile Authentication](https://www.mongodb.com/docs/manual/tutorial/enforce-keyfile-access-control-in-existing-replica-set/)
-
-#### Primary
-
 ```bash
-docker run -d --network u360-network -p 127.0.10.1:27017:27017 --name u360-mongo mongo:latest mongod --replSet rs-u360
+docker run -d --network u360-network --name u360-mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo:latest
 
 docker exec -it u360-mongo mongosh
-
-config = { "_id" : "rs-u360", "members" : [ { "_id" : 0, "host" : "u360-mongo:27017" }, { "_id" : 1, "host" : "u360-mongo-secondary:27017" } ] }
-
-rs.initiate(config)
-```
-
-##### Secondary
-
-```bash
-docker run -d --network u360-network -p 127.0.20.1:27017:27017 --name u360-mongo-secondary mongo:latest mongod --replSet rs-u360
-
-docker exec -it u360-mongo-secondary mongosh
-```
-
-##### Add Host
-
-```txt
-# Docker u360 MongoDB Replica Set
-127.0.10.1 u360-mongo
-127.0.20.1 u360-mongo-secondary
-# End of section
 ```
 
 #### URI
 
 ```txt
-mongodb://u360-mongo:27017,u360-mongo-secondary:27018/test?replicaSet=repl-set
+mongodb://admin:admin@localhost:27017/
 ```
 
-#### Redis
+### Redis
 
 ```bash
-docker run -d --network u360-network -p 6379:6379 --name u360-redis redis:latest
+docker run -d --network u360-network --name u360-redis -p 6379:6379 redis:latest
 ```
 
 ### Docker Build
@@ -105,7 +77,7 @@ docker build . -t u360-service:latest
 ### Docker Run
 
 ```bash
-docker run -d -p 80:80 -p 443:443 --network u360-network -v d:/Debug/u360-service/app:/app/ --name u360-service u360-service:latest
+docker run -d --network u360-network --name u360-service -p 80:80 -p 443:443 -v d:/Debug/u360-service/app:/app/ u360-service:latest
 ```
 
 ### Docker Compose

@@ -40,11 +40,6 @@ export const RequestConfigs = {
   REQUEST_TIMEOUT: process.env.REQUEST_TIMEOUT,
 };
 
-export const PrismaConfigs = {
-  ENABLE_PRISMA: process.env.ENABLE_PRISMA,
-  PRISMA_DATABASE_URL: process.env.PRISMA_DATABASE_URL,
-};
-
 export const bootstrap = async () => {
   console.log(`{"level":"info","message":"App Config is ready to use","timestamp":"${new Date().toISOString()}"}`);
 };

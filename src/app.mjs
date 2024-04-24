@@ -15,12 +15,12 @@ import * as AppConfigModule from './app.config.mjs';
 import * as BullMQService from './services/bullmq/bullmq.mjs';
 import * as LoggerService from './services/logger/logger.mjs';
 import * as MongoDBService from './services/mongodb/mongodb.mjs';
-import * as PrismaService from './services/prisma/prisma.mjs';
+import * as MongooseService from './services/mongoose/mongoose.mjs';
 
 await AppConfigModule.bootstrap();
 await LoggerService.bootstrap();
 await MongoDBService.bootstrap();
-await PrismaService.bootstrap();
+await MongooseService.bootstrap();
 await BullMQService.bootstrap();
 
 const __dirname = path.resolve();

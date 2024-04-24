@@ -25,3 +25,4 @@ router
   .get('/api-docs', swaggerUi.setup(swaggerJsdoc(swaggerJsdocOptions)));
 
 export { router as V1Router };
+
