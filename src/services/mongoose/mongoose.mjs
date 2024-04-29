@@ -17,4 +17,4 @@ const bootstrap = async () => {
   }
 };
 
-export { bootstrap, disconnect, mongoose };
+export { bootstrap, disconnect };
