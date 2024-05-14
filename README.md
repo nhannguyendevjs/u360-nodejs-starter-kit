@@ -52,7 +52,7 @@ docker run --name u360-ubuntu --network u360-network -p 80:8080 -p 443:8443 -p 2
 ### Postgres
 
 ```bash
-docker run -d --network u360-network --name u360-mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo:latest
+docker run --name u360-postgres --network u360-network -p 5432:5432 -e POSTGRES_DB=u360 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -d postgres:latest
 
 docker exec -it u360-postgres
 ```
