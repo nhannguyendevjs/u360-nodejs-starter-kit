@@ -78,7 +78,7 @@ docker build . -t u360-service:latest
 ### Docker Run
 
 ```bash
-docker run --name u360-postgres --network u360-network -p 5432:5432 -e POSTGRES_DB=u360 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -d postgres:latest
+docker run --name u360-user-service --network u360-network -p 8081:8081 -d u360-user-service:latest
 ```
 
 ### Docker Compose
