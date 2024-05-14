@@ -1,3 +1,4 @@
+import { PrismaConfigs } from './app.config.mjs';
 import { Logger } from './services/logger/logger.mjs';
 
 const cleanUp = async (eventType, eventDetails) => {
