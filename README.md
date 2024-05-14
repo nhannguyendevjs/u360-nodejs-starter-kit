@@ -26,8 +26,23 @@ Released under the [MIT License](LICENSE).
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge)
 ![Nodejs](https://img.shields.io/badge/Nodejs-43853d?logo=Node.js&logoColor=white&style=for-the-badge)
 ![MongoDB](https://img.shields.io/badge/MongoDB-13aa52?logo=mongodb&logoColor=white&style=for-the-badge)
+![Postgres](https://img.shields.io/badge/Postgres-316192?logo=postgresql&logoColor=white&style=for-the-badge)
 ![Redis](https://img.shields.io/badge/Redis-CB3837?logo=redis&logoColor=white&style=for-the-badge)
 ![BullMQ](https://img.shields.io/badge/BullMQ-1E293B?logo=bullmq&logoColor=white&style=for-the-badge)
+
+## Coding Naming Conventions
+
+➖ PascalCase 👉 Classes and Methods
+
+➖ camelCase 👉 variable and function names
+
+➖ snake_case 👉 file names and variable identifiers
+
+➖ kebab-case 👉 HTML attributes and CSS classes
+
+➖ UPPERCASE 👉 CONSTANTS and ENUMERATIONS
+
+➖ UPPER_SNAKE_CASE 👉 CONSTANTS and ENVIRONMENT_VARIABLES
 
 ## Git Branch Naming Convention
 
@@ -121,9 +136,7 @@ Use clear, descriptive names. Use camelCase for multi-word names. Avoid using Mo
 
 ## Visual Studio Extensions
 
-* ESLint
 * Prettier - Code formatter
-* Prettier ESLint
 * SonarLint
 * Code Spell Checker
 
