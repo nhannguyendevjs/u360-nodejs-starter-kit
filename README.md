@@ -31,6 +31,62 @@ Released under the [MIT License](LICENSE).
 ![BullMQ](https://img.shields.io/badge/BullMQ-1E293B?logo=bullmq&logoColor=white&style=for-the-badge)
 ![Socket.io](https://img.shields.io/badge/Socket.io-010101?logo=socketio&logoColor=white&style=for-the-badge)
 
+## Docker
+
+### Installation
+
+You can download and install Docker on https://docs.docker.com/desktop/install/windows-install/
+
+### Network
+
+```bash
+docker network create u360-network
+```
+
+### Ubuntu
+
+```bash
+docker run --name u360-ubuntu --network u360-network -p 80:8080 -p 443:8443 -p 22:22 -itd ubuntu:latest
+```
+
+### MongoDB
+
+```bash
+docker run -d --network u360-network --name u360-mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo:latest
+
+docker exec -it u360-mongo mongosh
+```
+
+#### URI
+
+```txt
+mongodb://admin:admin@localhost:27017/
+```
+
+### Redis
+
+```bash
+docker run -d --network u360-network --name u360-redis -p 6379:6379 redis:latest
+```
+
+### Docker Build
+
+```bash
+docker build . -t u360-service:latest
+```
+
+### Docker Run
+
+```bash
+docker run --name u360-postgres --network u360-network -p 5432:5432 -e POSTGRES_DB=u360 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -d postgres:latest
+```
+
+### Docker Compose
+
+```bash
+docker-compose up
+```
+
 ## Coding Naming Conventions
 
 ➖ PascalCase 👉 Classes and Methods
