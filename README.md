@@ -49,18 +49,18 @@ docker network create u360-network
 docker run --name u360-ubuntu --network u360-network -p 80:8080 -p 443:8443 -p 22:22 -itd ubuntu:latest
 ```
 
-### MongoDB
+### Postgres
 
 ```bash
 docker run -d --network u360-network --name u360-mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo:latest
 
-docker exec -it u360-mongo mongosh
+docker exec -it u360-postgres
 ```
 
 #### URI
 
 ```txt
-mongodb://admin:admin@localhost:27017/
+postgres://admin:admin@localhost:5432/u360?schema=public
 ```
 
 ### Redis
