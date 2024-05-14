@@ -29,6 +29,7 @@ Released under the [MIT License](LICENSE).
 ![Postgres](https://img.shields.io/badge/Postgres-316192?logo=postgresql&logoColor=white&style=for-the-badge)
 ![Redis](https://img.shields.io/badge/Redis-CB3837?logo=redis&logoColor=white&style=for-the-badge)
 ![BullMQ](https://img.shields.io/badge/BullMQ-1E293B?logo=bullmq&logoColor=white&style=for-the-badge)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?logo=socketio&logoColor=white&style=for-the-badge)
 
 ## Coding Naming Conventions
 
