@@ -114,6 +114,20 @@ docker run -d -p 80:80 -p 443:443 --network u360-network -v d:/Debug/u360/app:/a
 docker-compose up
 ```
 
+## Coding Naming Conventions
+
+➖ PascalCase 👉 Classes and Methods
+
+➖ camelCase 👉 variable and function names
+
+➖ snake_case 👉 file names and variable identifiers
+
+➖ kebab-case 👉 HTML attributes and CSS classes
+
+➖ UPPERCASE 👉 CONSTANTS and ENUMERATIONS
+
+➖ UPPER_SNAKE_CASE 👉 CONSTANTS and ENVIRONMENT_VARIABLES
+
 ## Git Branch Naming Convention
 
 ### Code Flow Branches
