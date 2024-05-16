@@ -1,0 +1,15 @@
+version: "3"
+services:
+  u360-service:
+      image: u360-service:latest
+      volumes:
+          - d:/Debug/u360-service/app:/app/
+      ports:
+          - "8080:8080"
+          - "8443:8443"
+      networks:
+          - u360-network
+      restart: always
+networks:
+  u360-network:
+      external: true
