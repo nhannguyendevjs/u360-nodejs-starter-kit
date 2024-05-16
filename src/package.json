@@ -5,7 +5,7 @@
   "description": "u360 Node.js starter kit",
   "main": "index.mjs",
   "engines": {
-    "node": "21.x"
+    "node": "20.x"
   },
   "scripts": {
     "test": "vitest",
