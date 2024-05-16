@@ -8,6 +8,11 @@ export const GeneralConfigs = {
   APP_ENV: process.env.APP_ENV,
 };
 
+export const BullMQConfigs = {
+  ENABLE_BULLMQ: process.env.ENABLE_BULLMQ,
+  BULLMQ_ADMIN_PATH: process.env.BULLMQ_ADMIN_PATH,
+};
+
 export const JWTConfigs = {
   JWT_ALGORITHM: process.env.JWT_ALGORITHM,
   JWT_ACCESS_TOKEN_SECRET: process.env.JWT_ACCESS_TOKEN_SECRET,
